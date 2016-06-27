@@ -8,7 +8,8 @@ Eventual goal is compliance with the
 
 Right now, I believe it is right there, but it will need a lot more tests to prove it.
 
-Special thanks to @tiagomazzutti for porting ANTLR 4 to Dart.
+Special thanks to Tiago Mazzutti for
+[this port of ANTLR4 to Dart](https://github.com/tiagomazzutti/antlr4dart).
 
 * [Usage](#usage)
 * [Examples](#examples)
