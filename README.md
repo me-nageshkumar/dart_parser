@@ -1,4 +1,6 @@
 # dart_parser
+![v1.0.0-dev](https://img.shields.io/badge/version-1.0.0--dev-red.svg)
+
 An ANTLR-based Dart parser.
 
 Eventual goal is compliance with the
@@ -7,6 +9,12 @@ Eventual goal is compliance with the
 Right now, I believe it is right there, but it will need a lot more tests to prove it.
 
 Special thanks to @tiagomazzutti for porting ANTLR 4 to Dart.
+
+* [Usage](#usage)
+* [Examples](#examples)
+* [Installation](#installation)
+* [Possibilities](#the-futuredynamic)
+* [Thank you for using dart_parser! :)](#thanks)
 
 # Installation
 ```yaml
