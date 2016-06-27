@@ -1,0 +1,9 @@
+name: dart_parser
+version: 1.0.0-dev
+description: An ANTLR-based Dart parser.
+author: Tobe O <thosakwe@gmail.com>
+homepage: https://github.com/thosakwe/dart_parser
+dependencies:
+  antlr4dart: ">=0.7.0 <1.0.0"
+dev_dependencies:
+  test: ">=0.12.14 <1.0.0"
