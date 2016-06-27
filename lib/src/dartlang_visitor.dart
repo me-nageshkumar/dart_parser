@@ -232,10 +232,25 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitFunctionTypeAlias(FunctionTypeAliasContext context);
 
+  /// Visit a parse tree produced by [DartlangParser.TopLevelStaticConstantDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context);
+
   /// Visit a parse tree produced by [DartlangParser.scriptTag].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitScriptTag(ScriptTagContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelVariableDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelVariableDefinition(TopLevelVariableDefinitionContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelSetterDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelSetterDefinition(TopLevelSetterDefinitionContext context);
 
   /// Visit a parse tree produced by [DartlangParser.incrementOperator].
   /// [context] is the parse tree.
@@ -387,6 +402,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitShiftOperator(ShiftOperatorContext context);
 
+  /// Visit a parse tree produced by [DartlangParser.TopLevelClassDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelClassDefinition(TopLevelClassDefinitionContext context);
+
   /// Visit a parse tree produced by [DartlangParser.typeTest].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -406,6 +426,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitFunctionPrefix(FunctionPrefixContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelFunctionDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context);
 
   /// Visit a parse tree produced by [DartlangParser.expression].
   /// [context] is the parse tree.
@@ -436,11 +461,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitFieldFormalParameter(FieldFormalParameterContext context);
-
-  /// Visit a parse tree produced by [DartlangParser.topLevelDefinition].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitTopLevelDefinition(TopLevelDefinitionContext context);
 
   /// Visit a parse tree produced by [DartlangParser.logicalOrExpression].
   /// [context] is the parse tree.
@@ -532,10 +552,20 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitConstantConstructorSignature(ConstantConstructorSignatureContext context);
 
+  /// Visit a parse tree produced by [DartlangParser.TopLevelExternalFunctionDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context);
+
   /// Visit a parse tree produced by [DartlangParser.yieldEachStatement].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitYieldEachStatement(YieldEachStatementContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelExternalSetterDeclaration].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context);
 
   /// Visit a parse tree produced by [DartlangParser.assignableSelector].
   /// [context] is the parse tree.
@@ -561,6 +591,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitNamedFormalParameters(NamedFormalParametersContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelGetterDefinition].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelGetterDefinition(TopLevelGetterDefinitionContext context);
 
   /// Visit a parse tree produced by [DartlangParser.booleanLiteral].
   /// [context] is the parse tree.
@@ -607,6 +642,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
 
+  /// Visit a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
+
   /// Visit a parse tree produced by [DartlangParser.formalParameterList].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -626,6 +666,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitLibraryExport(LibraryExportContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelTypeAliasDeclaration].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context);
 
   /// Visit a parse tree produced by [DartlangParser.superCallOrFieldInitializer].
   /// [context] is the parse tree.
@@ -741,6 +786,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitNamedArgument(NamedArgumentContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.TopLevelEnumDeclaration].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context);
 
   /// Visit a parse tree produced by [DartlangParser.op].
   /// [context] is the parse tree.

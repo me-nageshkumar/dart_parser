@@ -364,6 +364,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitFunctionTypeAlias(FunctionTypeAliasContext context);
 
+  /// Enter a parse tree produced by [DartlangParser.TopLevelStaticConstantDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelStaticConstantDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context);
+
   /// Enter a parse tree produced by [DartlangParser.scriptTag].
   /// [context] is the parse tree.
    void enterScriptTag(ScriptTagContext context);
@@ -371,6 +379,22 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.scriptTag].
   /// [context] is the parse tree.
   void exitScriptTag(ScriptTagContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelVariableDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelVariableDefinition(TopLevelVariableDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelVariableDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelVariableDefinition(TopLevelVariableDefinitionContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelSetterDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelSetterDefinition(TopLevelSetterDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelSetterDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelSetterDefinition(TopLevelSetterDefinitionContext context);
 
   /// Enter a parse tree produced by [DartlangParser.incrementOperator].
   /// [context] is the parse tree.
@@ -612,6 +636,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitShiftOperator(ShiftOperatorContext context);
 
+  /// Enter a parse tree produced by [DartlangParser.TopLevelClassDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelClassDefinition(TopLevelClassDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelClassDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelClassDefinition(TopLevelClassDefinitionContext context);
+
   /// Enter a parse tree produced by [DartlangParser.typeTest].
   /// [context] is the parse tree.
    void enterTypeTest(TypeTestContext context);
@@ -643,6 +675,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.functionPrefix].
   /// [context] is the parse tree.
   void exitFunctionPrefix(FunctionPrefixContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelFunctionDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelFunctionDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context);
 
   /// Enter a parse tree produced by [DartlangParser.expression].
   /// [context] is the parse tree.
@@ -691,14 +731,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.fieldFormalParameter].
   /// [context] is the parse tree.
   void exitFieldFormalParameter(FieldFormalParameterContext context);
-
-  /// Enter a parse tree produced by [DartlangParser.topLevelDefinition].
-  /// [context] is the parse tree.
-   void enterTopLevelDefinition(TopLevelDefinitionContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.topLevelDefinition].
-  /// [context] is the parse tree.
-  void exitTopLevelDefinition(TopLevelDefinitionContext context);
 
   /// Enter a parse tree produced by [DartlangParser.logicalOrExpression].
   /// [context] is the parse tree.
@@ -844,6 +876,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitConstantConstructorSignature(ConstantConstructorSignatureContext context);
 
+  /// Enter a parse tree produced by [DartlangParser.TopLevelExternalFunctionDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelExternalFunctionDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context);
+
   /// Enter a parse tree produced by [DartlangParser.yieldEachStatement].
   /// [context] is the parse tree.
    void enterYieldEachStatement(YieldEachStatementContext context);
@@ -851,6 +891,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.yieldEachStatement].
   /// [context] is the parse tree.
   void exitYieldEachStatement(YieldEachStatementContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelExternalSetterDeclaration].
+  /// [context] is the parse tree.
+   void enterTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelExternalSetterDeclaration].
+  /// [context] is the parse tree.
+  void exitTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context);
 
   /// Enter a parse tree produced by [DartlangParser.assignableSelector].
   /// [context] is the parse tree.
@@ -891,6 +939,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.namedFormalParameters].
   /// [context] is the parse tree.
   void exitNamedFormalParameters(NamedFormalParametersContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelGetterDefinition].
+  /// [context] is the parse tree.
+   void enterTopLevelGetterDefinition(TopLevelGetterDefinitionContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelGetterDefinition].
+  /// [context] is the parse tree.
+  void exitTopLevelGetterDefinition(TopLevelGetterDefinitionContext context);
 
   /// Enter a parse tree produced by [DartlangParser.booleanLiteral].
   /// [context] is the parse tree.
@@ -964,6 +1020,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
 
+  /// Enter a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
+  /// [context] is the parse tree.
+   void enterTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
+  /// [context] is the parse tree.
+  void exitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
+
   /// Enter a parse tree produced by [DartlangParser.formalParameterList].
   /// [context] is the parse tree.
    void enterFormalParameterList(FormalParameterListContext context);
@@ -995,6 +1059,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.libraryExport].
   /// [context] is the parse tree.
   void exitLibraryExport(LibraryExportContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelTypeAliasDeclaration].
+  /// [context] is the parse tree.
+   void enterTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelTypeAliasDeclaration].
+  /// [context] is the parse tree.
+  void exitTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context);
 
   /// Enter a parse tree produced by [DartlangParser.superCallOrFieldInitializer].
   /// [context] is the parse tree.
@@ -1179,6 +1251,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.namedArgument].
   /// [context] is the parse tree.
   void exitNamedArgument(NamedArgumentContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.TopLevelEnumDeclaration].
+  /// [context] is the parse tree.
+   void enterTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.TopLevelEnumDeclaration].
+  /// [context] is the parse tree.
+  void exitTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context);
 
   /// Enter a parse tree produced by [DartlangParser.op].
   /// [context] is the parse tree.

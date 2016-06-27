@@ -190,7 +190,19 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
+  T visitTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
   T visitScriptTag(ScriptTagContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelVariableDefinition(TopLevelVariableDefinitionContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelSetterDefinition(TopLevelSetterDefinitionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -314,6 +326,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
+  T visitTopLevelClassDefinition(TopLevelClassDefinitionContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
   T visitTypeTest(TypeTestContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -327,6 +343,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitFunctionPrefix(FunctionPrefixContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -351,10 +371,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitFieldFormalParameter(FieldFormalParameterContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
-  T visitTopLevelDefinition(TopLevelDefinitionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -430,7 +446,15 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
+  T visitTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
   T visitYieldEachStatement(YieldEachStatementContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -451,6 +475,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitNamedFormalParameters(NamedFormalParametersContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelGetterDefinition(TopLevelGetterDefinitionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -490,6 +518,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
+  T visitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
   T visitFormalParameterList(FormalParameterListContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -503,6 +535,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitLibraryExport(LibraryExportContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -595,6 +631,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitNamedArgument(NamedArgumentContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].

@@ -1,17 +1,17 @@
 grammar DartLibraries;
 
 topLevelDefinition:
-    classDefinition
-    | enumType
-    | typeAlias
-    | EXTERNAL? functionSignature SEMI
-    | EXTERNAL? getterSignature SEMI
-    | EXTERNAL? setterSignature SEMI
-    | functionSignature functionBody
-    | returnType? GET identifier functionBody
-    | returnType? SET identifier formalParameterList functionBody
-    | (FINAL|  CONST) type? staticFinalDeclarationList SEMI
-    | variableDeclaration SEMI
+    classDefinition #TopLevelClassDefinition
+    | enumType #TopLevelEnumDeclaration
+    | typeAlias #TopLevelTypeAliasDeclaration
+    | EXTERNAL? functionSignature SEMI #TopLevelExternalFunctionDefinition
+    | EXTERNAL? getterSignature SEMI #TopLevelExternalGetterDeclaration
+    | EXTERNAL? setterSignature SEMI #TopLevelExternalSetterDeclaration
+    | functionSignature functionBody #TopLevelFunctionDefinition
+    | returnType? GET identifier functionBody #TopLevelGetterDefinition
+    | returnType? SET identifier formalParameterList functionBody #TopLevelSetterDefinition
+    | (FINAL|  CONST) type? staticFinalDeclarationList SEMI #TopLevelStaticConstantDefinition
+    | variableDeclaration SEMI #TopLevelVariableDefinition
 ;
 
 getOrSet: GET | SET;

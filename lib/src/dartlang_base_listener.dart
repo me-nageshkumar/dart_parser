@@ -277,10 +277,28 @@ class DartlangBaseListener implements DartlangListener {
   void exitFunctionTypeAlias(FunctionTypeAliasContext context) {}
 
   /// The default implementation does nothing.
+  void enterTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelStaticConstantDefinition(TopLevelStaticConstantDefinitionContext context) {}
+
+  /// The default implementation does nothing.
   void enterScriptTag(ScriptTagContext context) {}
 
   /// The default implementation does nothing.
   void exitScriptTag(ScriptTagContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelVariableDefinition(TopLevelVariableDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelVariableDefinition(TopLevelVariableDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelSetterDefinition(TopLevelSetterDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelSetterDefinition(TopLevelSetterDefinitionContext context) {}
 
   /// The default implementation does nothing.
   void enterIncrementOperator(IncrementOperatorContext context) {}
@@ -463,6 +481,12 @@ class DartlangBaseListener implements DartlangListener {
   void exitShiftOperator(ShiftOperatorContext context) {}
 
   /// The default implementation does nothing.
+  void enterTopLevelClassDefinition(TopLevelClassDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelClassDefinition(TopLevelClassDefinitionContext context) {}
+
+  /// The default implementation does nothing.
   void enterTypeTest(TypeTestContext context) {}
 
   /// The default implementation does nothing.
@@ -485,6 +509,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitFunctionPrefix(FunctionPrefixContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelFunctionDefinition(TopLevelFunctionDefinitionContext context) {}
 
   /// The default implementation does nothing.
   void enterExpression(ExpressionContext context) {}
@@ -521,12 +551,6 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitFieldFormalParameter(FieldFormalParameterContext context) {}
-
-  /// The default implementation does nothing.
-  void enterTopLevelDefinition(TopLevelDefinitionContext context) {}
-
-  /// The default implementation does nothing.
-  void exitTopLevelDefinition(TopLevelDefinitionContext context) {}
 
   /// The default implementation does nothing.
   void enterLogicalOrExpression(LogicalOrExpressionContext context) {}
@@ -637,10 +661,22 @@ class DartlangBaseListener implements DartlangListener {
   void exitConstantConstructorSignature(ConstantConstructorSignatureContext context) {}
 
   /// The default implementation does nothing.
+  void enterTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelExternalFunctionDefinition(TopLevelExternalFunctionDefinitionContext context) {}
+
+  /// The default implementation does nothing.
   void enterYieldEachStatement(YieldEachStatementContext context) {}
 
   /// The default implementation does nothing.
   void exitYieldEachStatement(YieldEachStatementContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelExternalSetterDeclaration(TopLevelExternalSetterDeclarationContext context) {}
 
   /// The default implementation does nothing.
   void enterAssignableSelector(AssignableSelectorContext context) {}
@@ -671,6 +707,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitNamedFormalParameters(NamedFormalParametersContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelGetterDefinition(TopLevelGetterDefinitionContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelGetterDefinition(TopLevelGetterDefinitionContext context) {}
 
   /// The default implementation does nothing.
   void enterBooleanLiteral(BooleanLiteralContext context) {}
@@ -727,6 +769,12 @@ class DartlangBaseListener implements DartlangListener {
   void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) {}
 
   /// The default implementation does nothing.
+  void enterTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) {}
+
+  /// The default implementation does nothing.
   void enterFormalParameterList(FormalParameterListContext context) {}
 
   /// The default implementation does nothing.
@@ -749,6 +797,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitLibraryExport(LibraryExportContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelTypeAliasDeclaration(TopLevelTypeAliasDeclarationContext context) {}
 
   /// The default implementation does nothing.
   void enterSuperCallOrFieldInitializer(SuperCallOrFieldInitializerContext context) {}
@@ -887,6 +941,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitNamedArgument(NamedArgumentContext context) {}
+
+  /// The default implementation does nothing.
+  void enterTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context) {}
+
+  /// The default implementation does nothing.
+  void exitTopLevelEnumDeclaration(TopLevelEnumDeclarationContext context) {}
 
   /// The default implementation does nothing.
   void enterOp(OpContext context) {}

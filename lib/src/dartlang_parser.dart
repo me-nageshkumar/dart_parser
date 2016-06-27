@@ -7696,21 +7696,25 @@ class DartlangParser extends Parser {
       state = 1730;
       switch (interpreter.adaptivePredict(inputSource, 201, context)) {
         case 1:
+          localContext = new TopLevelClassDefinitionContext(localContext);
           enterOuterAlt(localContext, 1);
           state = 1681; 
           classDefinition();
           break;
         case 2:
+          localContext = new TopLevelEnumDeclarationContext(localContext);
           enterOuterAlt(localContext, 2);
           state = 1682; 
           enumType();
           break;
         case 3:
+          localContext = new TopLevelTypeAliasDeclarationContext(localContext);
           enterOuterAlt(localContext, 3);
           state = 1683; 
           typeAlias();
           break;
         case 4:
+          localContext = new TopLevelExternalFunctionDefinitionContext(localContext);
           enterOuterAlt(localContext, 4);
           state = 1685;
           _la = inputSource.lookAhead(1);
@@ -7724,6 +7728,7 @@ class DartlangParser extends Parser {
           match(SEMI);
           break;
         case 5:
+          localContext = new TopLevelExternalGetterDeclarationContext(localContext);
           enterOuterAlt(localContext, 5);
           state = 1691;
           _la = inputSource.lookAhead(1);
@@ -7737,6 +7742,7 @@ class DartlangParser extends Parser {
           match(SEMI);
           break;
         case 6:
+          localContext = new TopLevelExternalSetterDeclarationContext(localContext);
           enterOuterAlt(localContext, 6);
           state = 1697;
           _la = inputSource.lookAhead(1);
@@ -7750,6 +7756,7 @@ class DartlangParser extends Parser {
           match(SEMI);
           break;
         case 7:
+          localContext = new TopLevelFunctionDefinitionContext(localContext);
           enterOuterAlt(localContext, 7);
           state = 1702; 
           functionSignature();
@@ -7757,6 +7764,7 @@ class DartlangParser extends Parser {
           functionBody();
           break;
         case 8:
+          localContext = new TopLevelGetterDefinitionContext(localContext);
           enterOuterAlt(localContext, 8);
           state = 1706;
           _la = inputSource.lookAhead(1);
@@ -7772,6 +7780,7 @@ class DartlangParser extends Parser {
           functionBody();
           break;
         case 9:
+          localContext = new TopLevelSetterDefinitionContext(localContext);
           enterOuterAlt(localContext, 9);
           state = 1713;
           _la = inputSource.lookAhead(1);
@@ -7789,6 +7798,7 @@ class DartlangParser extends Parser {
           functionBody();
           break;
         case 10:
+          localContext = new TopLevelStaticConstantDefinitionContext(localContext);
           enterOuterAlt(localContext, 10);
           state = 1720;
           _la = inputSource.lookAhead(1);
@@ -7809,6 +7819,7 @@ class DartlangParser extends Parser {
           match(SEMI);
           break;
         case 11:
+          localContext = new TopLevelVariableDefinitionContext(localContext);
           enterOuterAlt(localContext, 11);
           state = 1727; 
           variableDeclaration();
@@ -13143,58 +13154,8 @@ class TopLevelDefinitionContext extends ParserRuleContext {
   TopLevelDefinitionContext(ParserRuleContext parent, int invokingState) : super(parent, invokingState);
 
   int get ruleIndex => DartlangParser.RULE_TOPLEVELDEFINITION;
-
-  TerminalNode getCONST() => getToken(DartlangParser.CONST, 0);
-
-  ReturnTypeContext getReturnType() => getRuleContext((c) => c is ReturnTypeContext, 0);
-
-  FormalParameterListContext getFormalParameterList() => getRuleContext((c) => c is FormalParameterListContext, 0);
-
-  VariableDeclarationContext getVariableDeclaration() => getRuleContext((c) => c is VariableDeclarationContext, 0);
-
-  TerminalNode getEXTERNAL() => getToken(DartlangParser.EXTERNAL, 0);
-
-  FunctionBodyContext getFunctionBody() => getRuleContext((c) => c is FunctionBodyContext, 0);
-
-  TypeAliasContext getTypeAlias() => getRuleContext((c) => c is TypeAliasContext, 0);
-
-  FunctionSignatureContext getFunctionSignature() => getRuleContext((c) => c is FunctionSignatureContext, 0);
-
-  IdentifierContext getIdentifier() => getRuleContext((c) => c is IdentifierContext, 0);
-
-  TerminalNode getGET() => getToken(DartlangParser.GET, 0);
-
-  StaticFinalDeclarationListContext getStaticFinalDeclarationList() => getRuleContext((c) => c is StaticFinalDeclarationListContext, 0);
-
-  EnumTypeContext getEnumType() => getRuleContext((c) => c is EnumTypeContext, 0);
-
-  TerminalNode getFINAL() => getToken(DartlangParser.FINAL, 0);
-
-  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
-
-  SetterSignatureContext getSetterSignature() => getRuleContext((c) => c is SetterSignatureContext, 0);
-
-  ClassDefinitionContext getClassDefinition() => getRuleContext((c) => c is ClassDefinitionContext, 0);
-
-  TypeContext getType() => getRuleContext((c) => c is TypeContext, 0);
-
-  GetterSignatureContext getGetterSignature() => getRuleContext((c) => c is GetterSignatureContext, 0);
-
-  TerminalNode getSET() => getToken(DartlangParser.SET, 0);
-
-  void enterRule(ParseTreeListener listener) {
-    if (listener is DartlangListener) 
-      listener.enterTopLevelDefinition(this);
-  }
-
-  void exitRule(ParseTreeListener listener) {
-    if (listener is DartlangListener) 
-      listener.exitTopLevelDefinition(this);
-  }
-
-  dynamic accept(ParseTreeVisitor visitor) {
-    if (visitor is DartlangVisitor) return visitor.visitTopLevelDefinition(this);
-    else return visitor.visitChildren(this);
+ 
+  TopLevelDefinitionContext.from(TopLevelDefinitionContext context) : super.from(context) {
   }
 }
 
@@ -13628,3 +13589,208 @@ class UriContext extends ParserRuleContext {
   }
 }
 
+class TopLevelExternalFunctionDefinitionContext extends TopLevelDefinitionContext {
+  TerminalNode getEXTERNAL() => getToken(DartlangParser.EXTERNAL, 0);
+  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
+  FunctionSignatureContext getFunctionSignature() => getRuleContext((c) => c is FunctionSignatureContext, 0);
+  TopLevelExternalFunctionDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelExternalFunctionDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelExternalFunctionDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelExternalFunctionDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelExternalSetterDeclarationContext extends TopLevelDefinitionContext {
+  TerminalNode getEXTERNAL() => getToken(DartlangParser.EXTERNAL, 0);
+  SetterSignatureContext getSetterSignature() => getRuleContext((c) => c is SetterSignatureContext, 0);
+  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
+  TopLevelExternalSetterDeclarationContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelExternalSetterDeclaration(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelExternalSetterDeclaration(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelExternalSetterDeclaration(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelFunctionDefinitionContext extends TopLevelDefinitionContext {
+  FunctionBodyContext getFunctionBody() => getRuleContext((c) => c is FunctionBodyContext, 0);
+  FunctionSignatureContext getFunctionSignature() => getRuleContext((c) => c is FunctionSignatureContext, 0);
+  TopLevelFunctionDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelFunctionDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelFunctionDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelFunctionDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelTypeAliasDeclarationContext extends TopLevelDefinitionContext {
+  TypeAliasContext getTypeAlias() => getRuleContext((c) => c is TypeAliasContext, 0);
+  TopLevelTypeAliasDeclarationContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelTypeAliasDeclaration(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelTypeAliasDeclaration(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelTypeAliasDeclaration(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelClassDefinitionContext extends TopLevelDefinitionContext {
+  ClassDefinitionContext getClassDefinition() => getRuleContext((c) => c is ClassDefinitionContext, 0);
+  TopLevelClassDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelClassDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelClassDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelClassDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelStaticConstantDefinitionContext extends TopLevelDefinitionContext {
+  TerminalNode getCONST() => getToken(DartlangParser.CONST, 0);
+  TerminalNode getFINAL() => getToken(DartlangParser.FINAL, 0);
+  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
+  TypeContext getType() => getRuleContext((c) => c is TypeContext, 0);
+  StaticFinalDeclarationListContext getStaticFinalDeclarationList() => getRuleContext((c) => c is StaticFinalDeclarationListContext, 0);
+  TopLevelStaticConstantDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelStaticConstantDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelStaticConstantDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelStaticConstantDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelGetterDefinitionContext extends TopLevelDefinitionContext {
+  ReturnTypeContext getReturnType() => getRuleContext((c) => c is ReturnTypeContext, 0);
+  FunctionBodyContext getFunctionBody() => getRuleContext((c) => c is FunctionBodyContext, 0);
+  IdentifierContext getIdentifier() => getRuleContext((c) => c is IdentifierContext, 0);
+  TerminalNode getGET() => getToken(DartlangParser.GET, 0);
+  TopLevelGetterDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelGetterDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelGetterDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelGetterDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelExternalGetterDeclarationContext extends TopLevelDefinitionContext {
+  TerminalNode getEXTERNAL() => getToken(DartlangParser.EXTERNAL, 0);
+  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
+  GetterSignatureContext getGetterSignature() => getRuleContext((c) => c is GetterSignatureContext, 0);
+  TopLevelExternalGetterDeclarationContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelExternalGetterDeclaration(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelExternalGetterDeclaration(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelExternalGetterDeclaration(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelVariableDefinitionContext extends TopLevelDefinitionContext {
+  VariableDeclarationContext getVariableDeclaration() => getRuleContext((c) => c is VariableDeclarationContext, 0);
+  TerminalNode getSEMI() => getToken(DartlangParser.SEMI, 0);
+  TopLevelVariableDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelVariableDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelVariableDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelVariableDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelSetterDefinitionContext extends TopLevelDefinitionContext {
+  FormalParameterListContext getFormalParameterList() => getRuleContext((c) => c is FormalParameterListContext, 0);
+  ReturnTypeContext getReturnType() => getRuleContext((c) => c is ReturnTypeContext, 0);
+  FunctionBodyContext getFunctionBody() => getRuleContext((c) => c is FunctionBodyContext, 0);
+  IdentifierContext getIdentifier() => getRuleContext((c) => c is IdentifierContext, 0);
+  TerminalNode getSET() => getToken(DartlangParser.SET, 0);
+  TopLevelSetterDefinitionContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelSetterDefinition(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelSetterDefinition(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelSetterDefinition(this);
+    else return visitor.visitChildren(this);
+  }
+}
+
+class TopLevelEnumDeclarationContext extends TopLevelDefinitionContext {
+  EnumTypeContext getEnumType() => getRuleContext((c) => c is EnumTypeContext, 0);
+  TopLevelEnumDeclarationContext(TopLevelDefinitionContext context) : super.from(context);
+  void enterRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.enterTopLevelEnumDeclaration(this);
+  }
+  void exitRule(ParseTreeListener listener) {
+    if (listener is DartlangListener) 
+      listener.exitTopLevelEnumDeclaration(this);
+  }
+  dynamic accept(ParseTreeVisitor visitor) {
+    if (visitor is DartlangVisitor) return visitor.visitTopLevelEnumDeclaration(this);
+    else return visitor.visitChildren(this);
+  }
+}
