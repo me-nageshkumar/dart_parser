@@ -6,7 +6,7 @@ An ANTLR-based Dart parser.
 Eventual goal is compliance with the
 [ECMA Standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-408.pdf).
 
-Right now, I believe it is right there, but it will need a lot more tests to prove it.
+Right now, it will need a lot more tests to prove it works.
 
 Special thanks to Tiago Mazzutti for
 [this port of ANTLR4 to Dart](https://github.com/tiagomazzutti/antlr4dart).

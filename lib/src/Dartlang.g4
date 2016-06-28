@@ -3,4 +3,4 @@ import DartLexer, DartVariables, DartFunctions, DartClasses, DartEnumsAndGeneric
 
 @header {part of dart_parser;}
 
-compilationUnit: libraryDefinition | partDeclaration | (topLevelDefinition+);
+compilationUnit: libraryDefinition | partDeclaration;
