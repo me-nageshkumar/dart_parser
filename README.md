@@ -52,6 +52,21 @@ metadatum: ARROBA ofType arguments?;
 ofType: qualified (DOT identifier)?;
 ```
 
+In addition, I had to change the way strings are lexed. This is out of
+line with the specification. The `stringLiteral` now looks like this:
+
+```antlr
+stringLiteral: (SINGLE_LINE_STRING | MULTI_LINE_STRING)+;
+```
+
+To handle the contents of strings, you will have to do it manually,
+like via Regex. Sorry!
+
+In addition, I modified the rules of external declarations, so that
+you could include metadata *before* the keyword `external`. The rule
+defined in the spec didn't permit that, although that's accepted by
+dartanalyzer, dart2js, etc.
+
 # Examples
 
 Create a parser:

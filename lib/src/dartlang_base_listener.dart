@@ -235,12 +235,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitIdentifierList(IdentifierListContext context) {}
 
   /// The default implementation does nothing.
-  void enterMultilineString(MultilineStringContext context) {}
-
-  /// The default implementation does nothing.
-  void exitMultilineString(MultilineStringContext context) {}
-
-  /// The default implementation does nothing.
   void enterShiftExpression(ShiftExpressionContext context) {}
 
   /// The default implementation does nothing.
@@ -637,12 +631,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitStaticFinalDeclarationList(StaticFinalDeclarationListContext context) {}
 
   /// The default implementation does nothing.
-  void enterStringInterpolation(StringInterpolationContext context) {}
-
-  /// The default implementation does nothing.
-  void exitStringInterpolation(StringInterpolationContext context) {}
-
-  /// The default implementation does nothing.
   void enterAssignmentOperator(AssignmentOperatorContext context) {}
 
   /// The default implementation does nothing.
@@ -835,12 +823,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitOptionalPositionFormalParameters(OptionalPositionFormalParametersContext context) {}
 
   /// The default implementation does nothing.
-  void enterStringContentSQ(StringContentSQContext context) {}
-
-  /// The default implementation does nothing.
-  void exitStringContentSQ(StringContentSQContext context) {}
-
-  /// The default implementation does nothing.
   void enterFieldInitializer(FieldInitializerContext context) {}
 
   /// The default implementation does nothing.
@@ -905,12 +887,6 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitLocalFunctionDeclaration(LocalFunctionDeclarationContext context) {}
-
-  /// The default implementation does nothing.
-  void enterStringContentTDQ(StringContentTDQContext context) {}
-
-  /// The default implementation does nothing.
-  void exitStringContentTDQ(StringContentTDQContext context) {}
 
   /// The default implementation does nothing.
   void enterSelector(SelectorContext context) {}
@@ -991,22 +967,10 @@ class DartlangBaseListener implements DartlangListener {
   void exitPartDeclaration(PartDeclarationContext context) {}
 
   /// The default implementation does nothing.
-  void enterSingleLineString(SingleLineStringContext context) {}
-
-  /// The default implementation does nothing.
-  void exitSingleLineString(SingleLineStringContext context) {}
-
-  /// The default implementation does nothing.
   void enterGetterSignature(GetterSignatureContext context) {}
 
   /// The default implementation does nothing.
   void exitGetterSignature(GetterSignatureContext context) {}
-
-  /// The default implementation does nothing.
-  void enterStringContentTSQ(StringContentTSQContext context) {}
-
-  /// The default implementation does nothing.
-  void exitStringContentTSQ(StringContentTSQContext context) {}
 
   /// The default implementation does nothing.
   void enterBreakStatement(BreakStatementContext context) {}
@@ -1031,12 +995,6 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitOnPart(OnPartContext context) {}
-
-  /// The default implementation does nothing.
-  void enterStringContentDQ(StringContentDQContext context) {}
-
-  /// The default implementation does nothing.
-  void exitStringContentDQ(StringContentDQContext context) {}
 
   /// The default implementation does nothing.
   void enterWhileStatement(WhileStatementContext context) {}

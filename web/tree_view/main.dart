@@ -45,9 +45,14 @@ class DumpListener extends DartlangBaseListener {
   @override
   void enterEveryRule(ParserRuleContext context) {
     print("Found a ${context.runtimeType}");
-    var node = new Element.html(
-        '<div class="ui item"><i class="angle right icon"></i>${context
-            .runtimeType} "${context.text}"</div>');
+    String name = context.runtimeType.toString().replaceAll(new RegExp(r"Context$"), "");
+    var node = new Element.html('''
+    <div class="ui item cm-s-default">
+      -  $name
+      <span class="cm-string">
+        "${context.text}"
+      </span>
+    </div>''');
     tree.children.add(node..style.marginLeft = "${_indents * 0.5}em");
     _indents++;
     super.enterEveryRule(context);

@@ -1,10 +1,11 @@
 grammar DartLexer;
 
-NEWLINE: '\n' | '\r';
-WHITESPACE: ('\t' | ' ' | NEWLINE)+ -> skip;
+WHITESPACE: ('\t' | ' ' | '\n' | '\r')+ -> skip;
 
 SINGLE_LINE_COMMENT: '//' ~( '\n' | '\r' )* -> channel(HIDDEN);
 MULTI_LINE_COMMENT: '/*' (MULTI_LINE_COMMENT | .)*? '*/' -> channel(HIDDEN);
+
+SCRIPT_TAG: '#!' (~('\n' | '\r'))*;
 
 // Symbols
 ANGLE_L: '<';
@@ -19,7 +20,6 @@ COMMA: ',';
 CURLY_L: '{';
 CURLY_R: '}';
 DIGIT: [0-9];
-DOLLAR: '$';
 DOT: '.';
 EQUALS_EQUALS: '==';
 EXCLAMATION: '!';
@@ -28,6 +28,15 @@ PAREN_R: ')';
 POUND: '#';
 QUESTION: '?';
 SEMI: ';';
+
+// Numbers
+NUMBER:
+    DIGIT+ (DOT DIGIT+)? EXPONENT?
+    | DOT DIGIT+ EXPONENT?
+;
+EXPONENT: ('e' | 'E') (PLUS | MINUS)? DIGIT+;
+HEX_NUMBER: '0' ('x' | 'X') HEX_DIGIT+;
+HEX_DIGIT: [A-Fa-f] | DIGIT;
 
 // Reserved words
 AS: 'as';
@@ -167,8 +176,64 @@ incrementOperator: INCREMENT | DECREMENT;
 isOperator: IS | IS_NOT;
 asOperator: AS;
 
-// Can't believe I didn't leave these for last, haha
+// String components have become lexer rules
 
+SINGLE_LINE_STRING:
+    '"' STRING_CONTENT_DQ* '"'
+    | '\'' STRING_CONTENT_SQ* '\''
+    | 'r' '\'' (~( '\'' | '\n' | '\r' ))* '\''
+    | 'r' '"' (~( '"' | '\n' | '\r' ))* '"'
+;
+
+MULTI_LINE_STRING:
+    '"""' STRING_CONTENT_TDQ* '"""'
+    | '\'\'\'' STRING_CONTENT_TSQ* '\'\'\''
+    | 'r' '"""' .*? '"""'
+    | 'r' '\'\'\'' .*? '\'\'\''
+;
+
+fragment ESCAPE_SEQUENCE:
+    '\\n'
+    | '\\r'
+    | '\\f'
+    | '\\b'
+    | '\t'
+    | '\\v'
+    | '\\x' HEX_DIGIT HEX_DIGIT
+    | '\\u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+    | '\\u' CURLY_L HEX_DIGIT_SEQUENCE CURLY_R
+;
+
+fragment HEX_DIGIT_SEQUENCE: HEX_DIGIT HEX_DIGIT? HEX_DIGIT? HEX_DIGIT? HEX_DIGIT? HEX_DIGIT?;
+
+fragment STRING_CONTENT_DQ:
+    ~( '\\' | '"' | '$' | '\n' | '\r' )
+    | '\\' ~( '\n' | '\r' )
+    | STRING_INTERPOLATION
+;
+fragment STRING_CONTENT_SQ:
+    ~( '\\' | '\'' | '$' | '\n' | '\r' )
+    | '\\' ~( '\n' | '\r' )
+    | STRING_INTERPOLATION
+;
+
+// ( ~'*' | ( '*'+ ~[/*]) )* '*'*
+fragment STRING_CONTENT_TDQ:
+    ~( '\\' | '$')
+    | STRING_INTERPOLATION
+;
+
+fragment STRING_CONTENT_TSQ:
+    ~( '\\' | '$')
+    | STRING_INTERPOLATION
+;
+
+fragment STRING_INTERPOLATION:
+    '$' IDENTIFIER
+    | '$' CURLY_L .+? CURLY_R
+;
+
+// Can't believe I didn't leave these for last, haha
 BUILT_IN_IDENTIFIER:
     ABSTRACT
     | AS
@@ -188,7 +253,7 @@ BUILT_IN_IDENTIFIER:
     | TYPEDEF
 ;
 
-fragment IDENTIFIER_START: IDENTIFIER_START_NO_DOLLAR | DOLLAR;
+fragment IDENTIFIER_START: IDENTIFIER_START_NO_DOLLAR | '$';
 fragment IDENTIFIER_START_NO_DOLLAR: [A-Za-z_];
 fragment IDENTIFIER_PART_NO_DOLLAR: IDENTIFIER_START_NO_DOLLAR | DIGIT;
 fragment IDENTIFIER_PART: IDENTIFIER_START | DIGIT;

@@ -31,72 +31,11 @@ nullLiteral: NULL;
 
 // Numbers
 numericLiteral: NUMBER | HEX_NUMBER;
-NUMBER:
-    DIGIT+ (DOT DIGIT+)? EXPONENT?
-    | DOT DIGIT+ EXPONENT?
-;
-EXPONENT: ('e' | 'E') (PLUS | MINUS)? DIGIT+;
-HEX_NUMBER: '0' ('x' | 'X') HEX_DIGIT+;
-HEX_DIGIT: [A-Fa-f] | DIGIT;
 
 booleanLiteral: TRUE | FALSE;
 
 // Strings
-stringLiteral: (multilineString | singleLineString)+;
-
-singleLineString:
-    '"' stringContentDQ* '"'
-    | '\'' stringContentSQ* '\''
-    | 'r' '\'' (~( '\'' | NEWLINE ))* '\''
-    | 'r' '"' (~( '"' | NEWLINE ))* '"'
-;
-
-multilineString:
-    '"""' stringContentTDQ* '""""'
-    | '\'\'\'' stringContentTSQ* '\'\'\''
-    | 'r' '"""' (~'"""')* '"""'
-    | 'r' '\'\'\'' (~'\'\'\'')* '\'\'\''
-;
-
-ESCAPE_SEQUENCE:
-    '\\n'
-    | '\\r'
-    | '\\f'
-    | '\\b'
-    | '\t'
-    | '\\v'
-    | '\\x' HEX_DIGIT HEX_DIGIT
-    | '\\u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
-    | '\\u' CURLY_L HEX_DIGIT_SEQUENCE CURLY_R
-;
-
-HEX_DIGIT_SEQUENCE: HEX_DIGIT HEX_DIGIT? HEX_DIGIT? HEX_DIGIT? HEX_DIGIT? HEX_DIGIT?;
-
-stringContentDQ:
-    ~( '\\' | '"' | DOLLAR | NEWLINE )
-    | '\\' ~( NEWLINE )
-    | stringInterpolation
-;
-stringContentSQ:
-    ~( '\\' | '\'' | DOLLAR | NEWLINE )
-    | '\\' ~( NEWLINE )
-    | stringInterpolation
-;
-
-stringContentTDQ:
-    ~( '\\' | '"""' | DOLLAR)
-    | stringInterpolation
-;
-
-stringContentTSQ:
-    ~( '\\' | '\'\'\'' | DOLLAR)
-    | stringInterpolation
-;
-
-stringInterpolation:
-    DOLLAR IDENTIFIER
-    | DOLLAR CURLY_L expression CURLY_R
-;
+stringLiteral: (MULTI_LINE_STRING | SINGLE_LINE_STRING)+;
 
 symbolLiteral: POUND (op | (identifier (DOT identifier)*));
 

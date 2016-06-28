@@ -162,10 +162,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitMultilineString(MultilineStringContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitShiftExpression(ShiftExpressionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -430,10 +426,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitStringInterpolation(StringInterpolationContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitAssignmentOperator(AssignmentOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -562,10 +554,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitStringContentSQ(StringContentSQContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitFieldInitializer(FieldInitializerContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -607,10 +595,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitLocalFunctionDeclaration(LocalFunctionDeclarationContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
-  T visitStringContentTDQ(StringContentTDQContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -666,15 +650,7 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitSingleLineString(SingleLineStringContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitGetterSignature(GetterSignatureContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
-  T visitStringContentTSQ(StringContentTSQContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -691,10 +667,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitOnPart(OnPartContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
-  T visitStringContentDQ(StringContentDQContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].

@@ -4,9 +4,9 @@ topLevelDefinition:
     classDefinition #TopLevelClassDefinition
     | enumType #TopLevelEnumDeclaration
     | typeAlias #TopLevelTypeAliasDeclaration
-    | EXTERNAL? functionSignature SEMI #TopLevelExternalFunctionDefinition
-    | EXTERNAL? getterSignature SEMI #TopLevelExternalGetterDeclaration
-    | EXTERNAL? setterSignature SEMI #TopLevelExternalSetterDeclaration
+    | metadata EXTERNAL? functionSignature SEMI #TopLevelExternalFunctionDefinition
+    | metadata EXTERNAL? getterSignature SEMI #TopLevelExternalGetterDeclaration
+    | metadata EXTERNAL? setterSignature SEMI #TopLevelExternalSetterDeclaration
     | functionSignature functionBody #TopLevelFunctionDefinition
     | returnType? GET identifier functionBody #TopLevelGetterDefinition
     | returnType? SET identifier formalParameterList functionBody #TopLevelSetterDefinition
@@ -16,7 +16,7 @@ topLevelDefinition:
 
 getOrSet: GET | SET;
 libraryDefinition: scriptTag? libraryName? importOrExport* partDirective* topLevelDefinition*;
-scriptTag: '#!' (~NEWLINE)* NEWLINE;
+scriptTag: SCRIPT_TAG;
 libraryName: metadata LIBRARY identifier (DOT identifier)* SEMI;
 importOrExport: libraryImport | libraryExport;
 

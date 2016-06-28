@@ -197,11 +197,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitIdentifierList(IdentifierListContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.multilineString].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitMultilineString(MultilineStringContext context);
-
   /// Visit a parse tree produced by [DartlangParser.shiftExpression].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -532,11 +527,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitStaticFinalDeclarationList(StaticFinalDeclarationListContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.stringInterpolation].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitStringInterpolation(StringInterpolationContext context);
-
   /// Visit a parse tree produced by [DartlangParser.assignmentOperator].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -697,11 +687,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitOptionalPositionFormalParameters(OptionalPositionFormalParametersContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.stringContentSQ].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitStringContentSQ(StringContentSQContext context);
-
   /// Visit a parse tree produced by [DartlangParser.fieldInitializer].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -756,11 +741,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitLocalFunctionDeclaration(LocalFunctionDeclarationContext context);
-
-  /// Visit a parse tree produced by [DartlangParser.stringContentTDQ].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitStringContentTDQ(StringContentTDQContext context);
 
   /// Visit a parse tree produced by [DartlangParser.selector].
   /// [context] is the parse tree.
@@ -827,20 +807,10 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitPartDeclaration(PartDeclarationContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.singleLineString].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitSingleLineString(SingleLineStringContext context);
-
   /// Visit a parse tree produced by [DartlangParser.getterSignature].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitGetterSignature(GetterSignatureContext context);
-
-  /// Visit a parse tree produced by [DartlangParser.stringContentTSQ].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitStringContentTSQ(StringContentTSQContext context);
 
   /// Visit a parse tree produced by [DartlangParser.breakStatement].
   /// [context] is the parse tree.
@@ -861,11 +831,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitOnPart(OnPartContext context);
-
-  /// Visit a parse tree produced by [DartlangParser.stringContentDQ].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitStringContentDQ(StringContentDQContext context);
 
   /// Visit a parse tree produced by [DartlangParser.whileStatement].
   /// [context] is the parse tree.
