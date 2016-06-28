@@ -23,13 +23,11 @@ DOLLAR: '$';
 DOT: '.';
 EQUALS_EQUALS: '==';
 EXCLAMATION: '!';
-LETTER: [A-Za-z];
 PAREN_L: '(';
 PAREN_R: ')';
 POUND: '#';
 QUESTION: '?';
 SEMI: ';';
-UNDERSCORE: '_';
 
 // Reserved words
 AS: 'as';
@@ -101,7 +99,7 @@ BITWISE_AND: '&';
 BITWISE_XOR: '^';
 BITWISE_OR: '|';
 DECREMENT: '--';
-EQUALS: '--';
+EQUALS: '=';
 GT: '>';
 GTE: '>=';
 LT: '<';
@@ -168,3 +166,32 @@ incrementOperator: INCREMENT | DECREMENT;
 
 isOperator: IS | IS_NOT;
 asOperator: AS;
+
+// Can't believe I didn't leave these for last, haha
+
+BUILT_IN_IDENTIFIER:
+    ABSTRACT
+    | AS
+    | DEFERRED
+    | DYNAMIC
+    | EXPORT
+    | EXTERNAL
+    | FACTORY
+    | GET
+    | IMPLEMENTS
+    | IMPORT
+    | LIBRARY
+    | OPERATOR
+    | PART
+    | SET
+    | STATIC
+    | TYPEDEF
+;
+
+fragment IDENTIFIER_START: IDENTIFIER_START_NO_DOLLAR | DOLLAR;
+fragment IDENTIFIER_START_NO_DOLLAR: [A-Za-z_];
+fragment IDENTIFIER_PART_NO_DOLLAR: IDENTIFIER_START_NO_DOLLAR | DIGIT;
+fragment IDENTIFIER_PART: IDENTIFIER_START | DIGIT;
+fragment IDENTIFIER_NO_DOLLAR: IDENTIFIER_START_NO_DOLLAR IDENTIFIER_PART_NO_DOLLAR*;
+
+IDENTIFIER: IDENTIFIER_START IDENTIFIER_PART*;

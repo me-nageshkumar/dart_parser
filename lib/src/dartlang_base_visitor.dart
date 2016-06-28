@@ -42,15 +42,15 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitRelationalOperator(RelationalOperatorContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitType(TypeContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitIfNullExpression(IfNullExpressionContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitRelationalOperator(RelationalOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -62,11 +62,11 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitIsOperator(IsOperatorContext context) => visitChildren(context);
+  T visitFunctionExpression(FunctionExpressionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitFunctionExpression(FunctionExpressionContext context) => visitChildren(context);
+  T visitIsOperator(IsOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -86,11 +86,11 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitAdditiveOperator(AdditiveOperatorContext context) => visitChildren(context);
+  T visitExpressionWithoutCascade(ExpressionWithoutCascadeContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitExpressionWithoutCascade(ExpressionWithoutCascadeContext context) => visitChildren(context);
+  T visitAdditiveOperator(AdditiveOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -298,11 +298,11 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitBitwiseOperator(BitwiseOperatorContext context) => visitChildren(context);
+  T visitTypeParameters(TypeParametersContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitTypeParameters(TypeParametersContext context) => visitChildren(context);
+  T visitBitwiseOperator(BitwiseOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -462,6 +462,10 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
+  T visitLit(LitContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
   T visitBitwiseAndExpression(BitwiseAndExpressionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
@@ -514,11 +518,11 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) => visitChildren(context);
+  T visitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) => visitChildren(context);
+  T visitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
@@ -646,15 +650,15 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitPostfixOperator(PostfixOperatorContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitNullLiteral(NullLiteralContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
   T visitSymbolLiteral(SymbolLiteralContext context) => visitChildren(context);
+
+  /// The default implementation returns the result of calling
+  /// [visitChildren] on [context].
+  T visitPostfixOperator(PostfixOperatorContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].

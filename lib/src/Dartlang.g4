@@ -1,6 +1,7 @@
 grammar Dartlang;
-import DartLexer, DartVariables, DartFunctions, DartClasses, DartEnumsAndGenerics, DartExpressions, DartStatements, DartLibraries;
+import DartVariables, DartFunctions, DartClasses, DartEnumsAndGenerics, DartExpressions, DartStatements, DartLibraries, DartLexer;
 
 @header {part of dart_parser;}
 
 compilationUnit: libraryDefinition | partDeclaration;
+lit: identifier;

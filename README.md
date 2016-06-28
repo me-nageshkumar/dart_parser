@@ -32,8 +32,9 @@ This library will be of absolutely no use to you unless you learn
 The root node is `compilationUnit`.
 
 In general, the names of all rules are the same as those in the ECMA specification. However,
-some rules I had to change the names of. `operator` became op. I also split `metadata` into
-`metadatum` and `ofType`:
+some rules I had to change the names of. `operator` became op.
+I removed the `IDENTIFIER_NO_DOLLAR` rule, as it didn't gel easily
+with ANTLR.' I also split `metadata` into `metadatum` and `ofType`:
 
 ```antlr
 // Example, @override() @Expose("foo")

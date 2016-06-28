@@ -68,14 +68,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitMetadatum(MetadatumContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.relationalOperator].
-  /// [context] is the parse tree.
-   void enterRelationalOperator(RelationalOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.relationalOperator].
-  /// [context] is the parse tree.
-  void exitRelationalOperator(RelationalOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.type].
   /// [context] is the parse tree.
    void enterType(TypeContext context);
@@ -91,6 +83,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.ifNullExpression].
   /// [context] is the parse tree.
   void exitIfNullExpression(IfNullExpressionContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.relationalOperator].
+  /// [context] is the parse tree.
+   void enterRelationalOperator(RelationalOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.relationalOperator].
+  /// [context] is the parse tree.
+  void exitRelationalOperator(RelationalOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.simpleFormalParameter].
   /// [context] is the parse tree.
@@ -108,14 +108,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitConstObjectExpression(ConstObjectExpressionContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.isOperator].
-  /// [context] is the parse tree.
-   void enterIsOperator(IsOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.isOperator].
-  /// [context] is the parse tree.
-  void exitIsOperator(IsOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.functionExpression].
   /// [context] is the parse tree.
    void enterFunctionExpression(FunctionExpressionContext context);
@@ -123,6 +115,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.functionExpression].
   /// [context] is the parse tree.
   void exitFunctionExpression(FunctionExpressionContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.isOperator].
+  /// [context] is the parse tree.
+   void enterIsOperator(IsOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.isOperator].
+  /// [context] is the parse tree.
+  void exitIsOperator(IsOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.normalFormalParameter].
   /// [context] is the parse tree.
@@ -156,14 +156,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitImportSpecification(ImportSpecificationContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.additiveOperator].
-  /// [context] is the parse tree.
-   void enterAdditiveOperator(AdditiveOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.additiveOperator].
-  /// [context] is the parse tree.
-  void exitAdditiveOperator(AdditiveOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.expressionWithoutCascade].
   /// [context] is the parse tree.
    void enterExpressionWithoutCascade(ExpressionWithoutCascadeContext context);
@@ -171,6 +163,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.expressionWithoutCascade].
   /// [context] is the parse tree.
   void exitExpressionWithoutCascade(ExpressionWithoutCascadeContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.additiveOperator].
+  /// [context] is the parse tree.
+   void enterAdditiveOperator(AdditiveOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.additiveOperator].
+  /// [context] is the parse tree.
+  void exitAdditiveOperator(AdditiveOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.superclass].
   /// [context] is the parse tree.
@@ -580,14 +580,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitReturnStatement(ReturnStatementContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.bitwiseOperator].
-  /// [context] is the parse tree.
-   void enterBitwiseOperator(BitwiseOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.bitwiseOperator].
-  /// [context] is the parse tree.
-  void exitBitwiseOperator(BitwiseOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.typeParameters].
   /// [context] is the parse tree.
    void enterTypeParameters(TypeParametersContext context);
@@ -595,6 +587,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.typeParameters].
   /// [context] is the parse tree.
   void exitTypeParameters(TypeParametersContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.bitwiseOperator].
+  /// [context] is the parse tree.
+   void enterBitwiseOperator(BitwiseOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.bitwiseOperator].
+  /// [context] is the parse tree.
+  void exitBitwiseOperator(BitwiseOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.literal].
   /// [context] is the parse tree.
@@ -908,6 +908,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitAssignableSelector(AssignableSelectorContext context);
 
+  /// Enter a parse tree produced by [DartlangParser.lit].
+  /// [context] is the parse tree.
+   void enterLit(LitContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.lit].
+  /// [context] is the parse tree.
+  void exitLit(LitContext context);
+
   /// Enter a parse tree produced by [DartlangParser.bitwiseAndExpression].
   /// [context] is the parse tree.
    void enterBitwiseAndExpression(BitwiseAndExpressionContext context);
@@ -1012,14 +1020,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitInitializedIdentifierList(InitializedIdentifierListContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.compoundAssignmentOperator].
-  /// [context] is the parse tree.
-   void enterCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.compoundAssignmentOperator].
-  /// [context] is the parse tree.
-  void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
   /// [context] is the parse tree.
    void enterTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
@@ -1027,6 +1027,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
   /// [context] is the parse tree.
   void exitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.compoundAssignmentOperator].
+  /// [context] is the parse tree.
+   void enterCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.compoundAssignmentOperator].
+  /// [context] is the parse tree.
+  void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.formalParameterList].
   /// [context] is the parse tree.
@@ -1276,14 +1284,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitInterfaces(InterfacesContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.postfixOperator].
-  /// [context] is the parse tree.
-   void enterPostfixOperator(PostfixOperatorContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.postfixOperator].
-  /// [context] is the parse tree.
-  void exitPostfixOperator(PostfixOperatorContext context);
-
   /// Enter a parse tree produced by [DartlangParser.nullLiteral].
   /// [context] is the parse tree.
    void enterNullLiteral(NullLiteralContext context);
@@ -1299,6 +1299,14 @@ abstract class DartlangListener extends ParseTreeListener {
   /// Exit a parse tree produced by [DartlangParser.symbolLiteral].
   /// [context] is the parse tree.
   void exitSymbolLiteral(SymbolLiteralContext context);
+
+  /// Enter a parse tree produced by [DartlangParser.postfixOperator].
+  /// [context] is the parse tree.
+   void enterPostfixOperator(PostfixOperatorContext context);
+
+  /// Exit a parse tree produced by [DartlangParser.postfixOperator].
+  /// [context] is the parse tree.
+  void exitPostfixOperator(PostfixOperatorContext context);
 
   /// Enter a parse tree produced by [DartlangParser.conditionalExpression].
   /// [context] is the parse tree.

@@ -11,7 +11,7 @@ initializedIdentifierList: initializedIdentifier (COMMA initializedIdentifier)*;
 
 // Also including types here
 type: typeName typeArguments?;
-typeName: qualified;
+typeName: qualified | DYNAMIC;
 typeArguments: ANGLE_L typeList ANGLE_R;
 typeList: type (COMMA type)*;
 typeAlias: metadata TYPEDEF typeAliasBody;

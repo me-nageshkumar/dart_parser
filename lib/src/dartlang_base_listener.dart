@@ -55,12 +55,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitMetadatum(MetadatumContext context) {}
 
   /// The default implementation does nothing.
-  void enterRelationalOperator(RelationalOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitRelationalOperator(RelationalOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterType(TypeContext context) {}
 
   /// The default implementation does nothing.
@@ -71,6 +65,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitIfNullExpression(IfNullExpressionContext context) {}
+
+  /// The default implementation does nothing.
+  void enterRelationalOperator(RelationalOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitRelationalOperator(RelationalOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterSimpleFormalParameter(SimpleFormalParameterContext context) {}
@@ -85,16 +85,16 @@ class DartlangBaseListener implements DartlangListener {
   void exitConstObjectExpression(ConstObjectExpressionContext context) {}
 
   /// The default implementation does nothing.
-  void enterIsOperator(IsOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitIsOperator(IsOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterFunctionExpression(FunctionExpressionContext context) {}
 
   /// The default implementation does nothing.
   void exitFunctionExpression(FunctionExpressionContext context) {}
+
+  /// The default implementation does nothing.
+  void enterIsOperator(IsOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitIsOperator(IsOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterNormalFormalParameter(NormalFormalParameterContext context) {}
@@ -121,16 +121,16 @@ class DartlangBaseListener implements DartlangListener {
   void exitImportSpecification(ImportSpecificationContext context) {}
 
   /// The default implementation does nothing.
-  void enterAdditiveOperator(AdditiveOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitAdditiveOperator(AdditiveOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterExpressionWithoutCascade(ExpressionWithoutCascadeContext context) {}
 
   /// The default implementation does nothing.
   void exitExpressionWithoutCascade(ExpressionWithoutCascadeContext context) {}
+
+  /// The default implementation does nothing.
+  void enterAdditiveOperator(AdditiveOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitAdditiveOperator(AdditiveOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterSuperclass(SuperclassContext context) {}
@@ -439,16 +439,16 @@ class DartlangBaseListener implements DartlangListener {
   void exitReturnStatement(ReturnStatementContext context) {}
 
   /// The default implementation does nothing.
-  void enterBitwiseOperator(BitwiseOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitBitwiseOperator(BitwiseOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterTypeParameters(TypeParametersContext context) {}
 
   /// The default implementation does nothing.
   void exitTypeParameters(TypeParametersContext context) {}
+
+  /// The default implementation does nothing.
+  void enterBitwiseOperator(BitwiseOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitBitwiseOperator(BitwiseOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterLiteral(LiteralContext context) {}
@@ -685,6 +685,12 @@ class DartlangBaseListener implements DartlangListener {
   void exitAssignableSelector(AssignableSelectorContext context) {}
 
   /// The default implementation does nothing.
+  void enterLit(LitContext context) {}
+
+  /// The default implementation does nothing.
+  void exitLit(LitContext context) {}
+
+  /// The default implementation does nothing.
   void enterBitwiseAndExpression(BitwiseAndExpressionContext context) {}
 
   /// The default implementation does nothing.
@@ -763,16 +769,16 @@ class DartlangBaseListener implements DartlangListener {
   void exitInitializedIdentifierList(InitializedIdentifierListContext context) {}
 
   /// The default implementation does nothing.
-  void enterCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) {}
 
   /// The default implementation does nothing.
   void exitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context) {}
+
+  /// The default implementation does nothing.
+  void enterCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterFormalParameterList(FormalParameterListContext context) {}
@@ -961,12 +967,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitInterfaces(InterfacesContext context) {}
 
   /// The default implementation does nothing.
-  void enterPostfixOperator(PostfixOperatorContext context) {}
-
-  /// The default implementation does nothing.
-  void exitPostfixOperator(PostfixOperatorContext context) {}
-
-  /// The default implementation does nothing.
   void enterNullLiteral(NullLiteralContext context) {}
 
   /// The default implementation does nothing.
@@ -977,6 +977,12 @@ class DartlangBaseListener implements DartlangListener {
 
   /// The default implementation does nothing.
   void exitSymbolLiteral(SymbolLiteralContext context) {}
+
+  /// The default implementation does nothing.
+  void enterPostfixOperator(PostfixOperatorContext context) {}
+
+  /// The default implementation does nothing.
+  void exitPostfixOperator(PostfixOperatorContext context) {}
 
   /// The default implementation does nothing.
   void enterConditionalExpression(ConditionalExpressionContext context) {}

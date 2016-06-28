@@ -47,11 +47,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitMetadatum(MetadatumContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.relationalOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitRelationalOperator(RelationalOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.type].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -61,6 +56,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitIfNullExpression(IfNullExpressionContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.relationalOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitRelationalOperator(RelationalOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.simpleFormalParameter].
   /// [context] is the parse tree.
@@ -72,15 +72,15 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitConstObjectExpression(ConstObjectExpressionContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.isOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitIsOperator(IsOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.functionExpression].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitFunctionExpression(FunctionExpressionContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.isOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitIsOperator(IsOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.normalFormalParameter].
   /// [context] is the parse tree.
@@ -102,15 +102,15 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitImportSpecification(ImportSpecificationContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.additiveOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitAdditiveOperator(AdditiveOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.expressionWithoutCascade].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitExpressionWithoutCascade(ExpressionWithoutCascadeContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.additiveOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitAdditiveOperator(AdditiveOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.superclass].
   /// [context] is the parse tree.
@@ -367,15 +367,15 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitReturnStatement(ReturnStatementContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.bitwiseOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitBitwiseOperator(BitwiseOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.typeParameters].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitTypeParameters(TypeParametersContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.bitwiseOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitBitwiseOperator(BitwiseOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.literal].
   /// [context] is the parse tree.
@@ -572,6 +572,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitAssignableSelector(AssignableSelectorContext context);
 
+  /// Visit a parse tree produced by [DartlangParser.lit].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitLit(LitContext context);
+
   /// Visit a parse tree produced by [DartlangParser.bitwiseAndExpression].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -637,15 +642,15 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitInitializedIdentifierList(InitializedIdentifierListContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.compoundAssignmentOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.TopLevelExternalGetterDeclaration].
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitTopLevelExternalGetterDeclaration(TopLevelExternalGetterDeclarationContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.compoundAssignmentOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitCompoundAssignmentOperator(CompoundAssignmentOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.formalParameterList].
   /// [context] is the parse tree.
@@ -802,11 +807,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitInterfaces(InterfacesContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.postfixOperator].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitPostfixOperator(PostfixOperatorContext context);
-
   /// Visit a parse tree produced by [DartlangParser.nullLiteral].
   /// [context] is the parse tree.
   /// Return the visitor result.
@@ -816,6 +816,11 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// [context] is the parse tree.
   /// Return the visitor result.
   T visitSymbolLiteral(SymbolLiteralContext context);
+
+  /// Visit a parse tree produced by [DartlangParser.postfixOperator].
+  /// [context] is the parse tree.
+  /// Return the visitor result.
+  T visitPostfixOperator(PostfixOperatorContext context);
 
   /// Visit a parse tree produced by [DartlangParser.conditionalExpression].
   /// [context] is the parse tree.
