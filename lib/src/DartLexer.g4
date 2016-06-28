@@ -3,7 +3,7 @@ grammar DartLexer;
 NEWLINE: '\n' | '\r';
 WHITESPACE: ('\t' | ' ' | NEWLINE)+ -> skip;
 
-SINGLE_LINE_COMMENT: '//' .*? NEWLINE* -> channel(HIDDEN);
+SINGLE_LINE_COMMENT: '//' ~( '\n' | '\r' )* -> channel(HIDDEN);
 MULTI_LINE_COMMENT: '/*' (MULTI_LINE_COMMENT | .)*? '*/' -> channel(HIDDEN);
 
 // Symbols

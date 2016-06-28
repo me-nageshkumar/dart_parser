@@ -6,37 +6,60 @@ import 'package:codemirror/codemirror.dart';
 import 'package:dart_parser/dart_parser.dart';
 
 main() {
+  var tree = document.getElementById("tree");
   var codeMirror = new CodeMirror.fromTextArea(
       document.getElementById("editor"), options: {
     "mode": "application/dart"
   });
 
-  document.getElementById("build").onClick.listen((_) {
+  document
+      .getElementById("build")
+      .onClick
+      .listen((_) {
     String code = codeMirror.getDoc().getValue();
     var source = new StringSource(code);
-    var lexer = new DartlangLexer(source)..onSyntaxError.listen(onSyntaxError);
+    var lexer = new DartlangLexer(source)
+      ..onSyntaxError.listen(onSyntaxError);
     var tokens = new CommonTokenSource(lexer);
-    var parser = new DartlangParser(tokens)..onSyntaxError.listen(onSyntaxError);
+    var parser = new DartlangParser(tokens)
+      ..onSyntaxError.listen(onSyntaxError);
     var ast = parser.compilationUnit();
-    var tree = document.getElementById("tree")..children.clear();
-    dumpCtx(ast, tree);
+
+    ParseTreeWalker.DEFAULT.walk(new DumpListener(tree..children.clear()), ast);
+  });
+
+  document
+      .getElementById("clear")
+      .onClick
+      .listen((_) {
+    tree.children.clear();
   });
 }
 
-String spaces() => 'style="margin-left: ${indents}em"';
+class DumpListener extends DartlangBaseListener {
+  int _indents = 0;
+  Element tree;
 
-int indents = 0;
-dumpCtx(ParserRuleContext ctx, Element elem) {
-  var node = new Element.html('<div class="ui item" ${spaces()}><i class="caret down icon"></i>${ctx.runtimeType}</div>');
-  elem.children..add(node);
-  indents++;
-  ctx.children?.forEach((child) => dumpTree(child, elem));
-  indents--;
-}
+  DumpListener(this.tree);
 
-dumpTree(ParseTree tree, Element elem) {
-  var node = new Element.html('<div class="ui item"${spaces()}><i class="caret down icon"></i>${tree.runtimeType}</div>');
-  elem.children.add(node);
+  @override
+  void enterEveryRule(ParserRuleContext context) {
+    print("Found a ${context.runtimeType}");
+    var node = new Element.html(
+        '<div class="ui item"><i class="angle right icon"></i>${context
+            .runtimeType} "${context.text}"</div>');
+    tree.children.add(node..style.marginLeft = "${_indents * 0.5}em");
+    _indents++;
+    super.enterEveryRule(context);
+  }
+
+  @override
+  void exitEveryRule(ParserRuleContext context) {
+    super.exitEveryRule(context);
+    _indents--;
+  }
+
+
 }
 
 onSyntaxError(SyntaxError e) {

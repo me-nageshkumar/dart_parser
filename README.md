@@ -14,6 +14,7 @@ Special thanks to Tiago Mazzutti for
 * [Usage](#usage)
 * [Examples](#examples)
 * [Installation](#installation)
+* [Tree View](#tree-view)
 * [Possibilities](#the-futuredynamic)
 * [Thank you for using dart_parser! :)](#thanks)
 
@@ -109,6 +110,14 @@ main() {
   new MyVisitor().visitCompilationUnit(parser.compilationUnit());
 }
 ```
+
+# Tree View
+
+![Tree View](screenshots/tree_view.PNG)
+
+This package includes a web app that diagrams your parse trees.
+Alternatively, you can use `grun`, which ships with the ANTLR tool
+itself.
 
 # The Future\<dynamic\>
 
