@@ -685,12 +685,6 @@ class DartlangBaseListener implements DartlangListener {
   void exitAssignableSelector(AssignableSelectorContext context) {}
 
   /// The default implementation does nothing.
-  void enterLit(LitContext context) {}
-
-  /// The default implementation does nothing.
-  void exitLit(LitContext context) {}
-
-  /// The default implementation does nothing.
   void enterBitwiseAndExpression(BitwiseAndExpressionContext context) {}
 
   /// The default implementation does nothing.

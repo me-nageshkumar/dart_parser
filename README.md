@@ -29,7 +29,10 @@ This will automatically install `antlr4dart` as well.
 This library will be of absolutely no use to you unless you learn
 [ANTLR](http://www.antlr.org/), which is what I wrote it with.
 
-The root node is `compilationUnit`.
+The root node is `compilationUnit`. Dart compilation units consist of
+either a single `libraryDefinition`, or a `partDeclaration`. Most files,
+whether they use the `library` keyword or not, are categorized as
+`libraryDefinition`.
 
 In general, the names of all rules are the same as those in the ECMA specification. However,
 some rules I had to change the names of. `operator` became op.
@@ -103,7 +106,7 @@ main() {
   ParseTreeWalker.DEFAULT.walk(new MyListener(), parser.compilationUnit());
 
   // For a visitor
-  new MyVisitor().visitCompilationUnit(parse.compilationUnit());
+  new MyVisitor().visitCompilationUnit(parser.compilationUnit());
 }
 ```
 

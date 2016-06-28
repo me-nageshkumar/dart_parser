@@ -908,14 +908,6 @@ abstract class DartlangListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitAssignableSelector(AssignableSelectorContext context);
 
-  /// Enter a parse tree produced by [DartlangParser.lit].
-  /// [context] is the parse tree.
-   void enterLit(LitContext context);
-
-  /// Exit a parse tree produced by [DartlangParser.lit].
-  /// [context] is the parse tree.
-  void exitLit(LitContext context);
-
   /// Enter a parse tree produced by [DartlangParser.bitwiseAndExpression].
   /// [context] is the parse tree.
    void enterBitwiseAndExpression(BitwiseAndExpressionContext context);

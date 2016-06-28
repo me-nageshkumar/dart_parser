@@ -462,10 +462,6 @@ class DartlangBaseVisitor<T> extends ParseTreeVisitor<T> implements DartlangVisi
 
   /// The default implementation returns the result of calling
   /// [visitChildren] on [context].
-  T visitLit(LitContext context) => visitChildren(context);
-
-  /// The default implementation returns the result of calling
-  /// [visitChildren] on [context].
   T visitBitwiseAndExpression(BitwiseAndExpressionContext context) => visitChildren(context);
 
   /// The default implementation returns the result of calling

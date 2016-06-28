@@ -572,11 +572,6 @@ abstract class DartlangVisitor<T> extends ParseTreeVisitor<T> {
   /// Return the visitor result.
   T visitAssignableSelector(AssignableSelectorContext context);
 
-  /// Visit a parse tree produced by [DartlangParser.lit].
-  /// [context] is the parse tree.
-  /// Return the visitor result.
-  T visitLit(LitContext context);
-
   /// Visit a parse tree produced by [DartlangParser.bitwiseAndExpression].
   /// [context] is the parse tree.
   /// Return the visitor result.

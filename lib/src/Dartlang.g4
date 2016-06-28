@@ -4,4 +4,3 @@ import DartVariables, DartFunctions, DartClasses, DartEnumsAndGenerics, DartExpr
 @header {part of dart_parser;}
 
 compilationUnit: libraryDefinition | partDeclaration;
-lit: identifier;
