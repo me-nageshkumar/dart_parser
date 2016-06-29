@@ -19,7 +19,7 @@ COLON: ':';
 COMMA: ',';
 CURLY_L: '{';
 CURLY_R: '}';
-DIGIT: [0-9];
+fragment DIGIT: [0-9];
 DOT: '.';
 EQUALS_EQUALS: '==';
 EXCLAMATION: '!';
